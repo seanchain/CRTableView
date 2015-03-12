@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>041EDCF1-2328-4C15-95D2-1F256E85AF8E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CRTableView</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BF706B74A0C55B69C10E7EA7FDEB8D9EAAA38D5C</key>
+		<string>https://github.com/seanchain/CRTableView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CRTableView/CRTableView.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BF706B74A0C55B69C10E7EA7FDEB8D9EAAA38D5C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/seanchain/CRTableView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BF706B74A0C55B69C10E7EA7FDEB8D9EAAA38D5C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BF706B74A0C55B69C10E7EA7FDEB8D9EAAA38D5C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CRTableView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
