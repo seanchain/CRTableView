@@ -53,15 +53,14 @@
 
 - (void)dealloc {
     delegate = nil;
-    [_tableView release], _tableView = nil;
-    [_headerView release], _headerView = nil;
-    [_rowData release], _rowData = nil;
-    [_weights release], _weights = nil;
-    [_innerWeights release], _innerWeights = nil;
-    [_titlesArray release], _titlesArray = nil;
-    [_headerOptions release], _headerOptions = nil;
-    [_selectedBackgroundView release], _selectedBackgroundView = nil;
-    [super dealloc];
+    _tableView = nil;
+    _headerView = nil;
+    _rowData = nil;
+    _weights = nil;
+    _innerWeights = nil;
+    _titlesArray = nil;
+    _headerOptions = nil;
+    _selectedBackgroundView = nil;
 }
 
 - (void)initialize {
@@ -81,7 +80,7 @@
 }
 
 - (void)setSelectionColor:(UIColor *)aColor {
-    [_selectedBackgroundView release], _selectedBackgroundView = nil;
+    _selectedBackgroundView = nil;
     
     if (aColor) {
         _selectedBackgroundView = [[UIView alloc] init];
@@ -118,7 +117,7 @@
     self.headerHeight = aHeight;
     self.innerWeights = aInnerWeights;
     self.titlesArray = aArr;
-    self.HeaderOptions = aOptions;
+    self.headerOptions = aOptions;
     
     ASFTableViewCell *hView = [[ASFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HEADER"];
     [hView setFrame:CGRectMake(0, 0, [self frame].size.width, aHeight)];
@@ -129,10 +128,8 @@
     }
     [hView setMinHeight:aHeight];
     [hView setColumns:newArr Options:aOptions IsInnerRow:false];
-    [newArr release];
     
     self.headerView = hView;
-    [hView release];
     
     if (!floatHeader) {
         _tableView.tableHeaderView = _headerView;
@@ -143,7 +140,7 @@
 }
 
 - (void)setRows:(NSArray *)aArr {
-    [_rowData release], _rowData = nil;
+    _rowData = nil;
     
     _rowData = [[NSMutableArray alloc] initWithCapacity:[aArr count]];
     for (int i=0; i<[aArr count]; i++) {
@@ -166,14 +163,11 @@
             }
             
             [newCols addObject:rowDict];
-            [rowDict release];
         }
         
         [dict setValue:newCols forKey:kASF_ROW_CELLS];
-        [newCols release];
         
         [_rowData addObject:dict];
-        [dict release];
     }
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -195,7 +189,7 @@
     
     ASFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
-        cell = [[[ASFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier] autorelease];
+        cell = [[ASFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
         [cell setFrame:CGRectMake(0, 0, _tableView.frame.size.width, 44)];
         [cell setSelectedBackgroundView:_selectedBackgroundView];
     }

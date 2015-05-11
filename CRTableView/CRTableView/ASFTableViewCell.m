@@ -36,10 +36,9 @@
 }
 
 - (void)dealloc {
-    [_dictOptions release], _dictOptions = nil;
-    [_arrLabels release], _arrLabels = nil;
-    [_arrTextViews release], _arrTextViews = nil;
-    [super dealloc];
+    _dictOptions = nil;
+    _arrLabels = nil;
+    _arrTextViews = nil;
 }
 
 - (void)setColumns:(NSArray *)aArr Options:(NSDictionary *)aOptions IsInnerRow:(BOOL)isInnerRow {
@@ -145,7 +144,6 @@
             if (createNewView) {
                 [self addSubview:textView];
                 [_arrTextViews addObject:textView];
-                [textView release];
             }
             
             txtCount++;
@@ -187,7 +185,6 @@
             if (createNewLabel) {
                 [self addSubview:lbl];
                 [_arrLabels addObject:lbl];
-                [lbl release];
             }
             
             lblCount++;
@@ -228,33 +225,5 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 }
-
-//#pragma mark - UITextViewDelegate
-//- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
-//    CGPoint pointInTable = [[textView superview] convertPoint:textView.frame.origin toView:tableView];
-//    CGPoint contentOffset = tableView.contentOffset;
-//    
-//    contentOffset.y = (pointInTable.y - textView.inputAccessoryView.frame.size.height);
-//    
-//    NSLog(@"contentOffset is: %@", NSStringFromCGPoint(contentOffset));
-//    
-//    [tableView setContentOffset:contentOffset animated:YES];
-//    
-//    return YES;
-//}
-//
-//- (BOOL)textViewShouldEndEditing:(UITextView *)textView; {
-//    [textView resignFirstResponder];
-//    
-//    if ([textView.superview.superview isKindOfClass:[UITableViewCell class]]) {
-//        
-//        UITableViewCell *cell = (UITableViewCell*)textView.superview.superview;
-//        NSIndexPath *indexPath = [tableView indexPathForCell:cell];
-//        
-//        [tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:TRUE];
-//    }
-//    
-//    return YES;
-//}
 
 @end
