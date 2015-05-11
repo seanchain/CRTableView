@@ -80,12 +80,13 @@
 }
 
 - (void)setSelectionColor:(UIColor *)aColor {
-    _selectedBackgroundView = nil;
-    
-    if (aColor) {
-        _selectedBackgroundView = [[UIView alloc] init];
-        [_selectedBackgroundView setBackgroundColor:aColor];
-    }
+//    _selectedBackgroundView = nil;
+//    
+//    if (aColor) {
+//        _selectedBackgroundView = [[UIView alloc] init];
+//        [_selectedBackgroundView setBackgroundColor:aColor];
+//    }
+    NSLog(@"Deprecated method");
 }
 
 - (NSDictionary *)selectedRowData {
@@ -190,6 +191,7 @@
     ASFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
         cell = [[ASFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setFrame:CGRectMake(0, 0, _tableView.frame.size.width, 44)];
         [cell setSelectedBackgroundView:_selectedBackgroundView];
     }
