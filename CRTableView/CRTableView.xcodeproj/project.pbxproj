@@ -19,6 +19,9 @@
 		7784F5251B0051FE00ED262C /* ASFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F51E1B0051FE00ED262C /* ASFTableViewCell.m */; };
 		7784F5261B0051FE00ED262C /* ASFTableViewPrivateGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F5201B0051FE00ED262C /* ASFTableViewPrivateGlobals.m */; };
 		7784F5271B0051FE00ED262C /* ASFTableViewPublicGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F5221B0051FE00ED262C /* ASFTableViewPublicGlobals.m */; };
+		7784F52A1B021D2F00ED262C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7784F5291B021D2F00ED262C /* SystemConfiguration.framework */; };
+		7784F52D1B021E0E00ED262C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F52C1B021E0E00ED262C /* Reachability.m */; };
+		7784F5301B02223900ED262C /* Func.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F52F1B02223900ED262C /* Func.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,11 @@
 		7784F5201B0051FE00ED262C /* ASFTableViewPrivateGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableViewPrivateGlobals.m; sourceTree = "<group>"; };
 		7784F5211B0051FE00ED262C /* ASFTableViewPublicGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFTableViewPublicGlobals.h; sourceTree = "<group>"; };
 		7784F5221B0051FE00ED262C /* ASFTableViewPublicGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableViewPublicGlobals.m; sourceTree = "<group>"; };
+		7784F5291B021D2F00ED262C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7784F52B1B021E0E00ED262C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		7784F52C1B021E0E00ED262C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		7784F52E1B02223900ED262C /* Func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Func.h; sourceTree = "<group>"; };
+		7784F52F1B02223900ED262C /* Func.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Func.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7784F52A1B021D2F00ED262C /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,7 @@
 		7755B32F1AB1E88E0028FF63 = {
 			isa = PBXGroup;
 			children = (
+				7784F5291B021D2F00ED262C /* SystemConfiguration.framework */,
 				7755B33A1AB1E88E0028FF63 /* CRTableView */,
 				7755B3541AB1E88E0028FF63 /* CRTableViewTests */,
 				7755B3391AB1E88E0028FF63 /* Products */,
@@ -96,6 +106,10 @@
 		7755B33A1AB1E88E0028FF63 /* CRTableView */ = {
 			isa = PBXGroup;
 			children = (
+				7784F52E1B02223900ED262C /* Func.h */,
+				7784F52F1B02223900ED262C /* Func.m */,
+				7784F52B1B021E0E00ED262C /* Reachability.h */,
+				7784F52C1B021E0E00ED262C /* Reachability.m */,
 				7784F5281B00520400ED262C /* ASFGroup */,
 				7755B33F1AB1E88E0028FF63 /* AppDelegate.h */,
 				7755B3401AB1E88E0028FF63 /* AppDelegate.m */,
@@ -257,8 +271,10 @@
 				7755B3441AB1E88E0028FF63 /* ViewController.m in Sources */,
 				7755B3411AB1E88E0028FF63 /* AppDelegate.m in Sources */,
 				7784F5241B0051FE00ED262C /* ASFTableView.m in Sources */,
+				7784F5301B02223900ED262C /* Func.m in Sources */,
 				7755B33E1AB1E88E0028FF63 /* main.m in Sources */,
 				7784F5271B0051FE00ED262C /* ASFTableViewPublicGlobals.m in Sources */,
+				7784F52D1B021E0E00ED262C /* Reachability.m in Sources */,
 				7784F5231B0051FE00ED262C /* ASFLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

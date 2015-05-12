@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "Reachability.h"
+#import "Func.h"
+
 
 @interface ViewController ()
 
@@ -18,6 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    Reachability *reach = [Reachability reachabilityWithHostName:@"www.chensihang.com"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    [reach startNotifier];
+    
     NSString *stunumber = @"2013141463163";
     NSString *passwd = @"******";
     NSString *info = @"allsem";
@@ -85,6 +93,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) reachabilityChanged: (NSNotification*)note {
+    Reachability * reach = [note object];
+    
+    if(![reach isReachable])
+    {
+        [Func showAlert:@"No internet connection!"];
+        exit(0);
+    }
 }
 
 @end

@@ -204,7 +204,6 @@
         
         CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:[[lbl font] pointSize]]
                        constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping];
-        
         CGFloat height = MAX(size.height, minHeight);
         height = height + (CELL_CONTENT_MARGIN * 2);
         
